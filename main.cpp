@@ -1,3 +1,5 @@
+#include <iostream>
+#include <assert.h>
 #include "ColorPair.h"
 
 void testNumberToPair(int pairNumber,
