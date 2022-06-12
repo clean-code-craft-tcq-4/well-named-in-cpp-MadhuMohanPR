@@ -1,3 +1,5 @@
+#include <string>
+
 #define MAJORCOLORSIZE 5
 #define MINORCOLORSIZE 5
 
