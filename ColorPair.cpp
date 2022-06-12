@@ -1,13 +1,12 @@
 #include "ColorPair.h"
-using namespace TelCoColorCoder;
 
 namespace TelCoColorCoder
 {
-    MajorColorNames = { "White", "Red", "Black", "Yellow", "Violet" };
-    MinorColorNames = { "Blue", "Orange", "Green", "Brown", "Slate" };
+    TelCoColorCoder::MajorColorNames = { "White", "Red", "Black", "Yellow", "Violet" };
+    TelCoColorCoder::MinorColorNames = { "Blue", "Orange", "Green", "Brown", "Slate" };
 
-    numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);    
-    numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+    TelCoColorCoder::numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);    
+    TelCoColorCoder::numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
     ColorPair::ColorPair(MajorColor major, MinorColor minor): majorColor(major), minorColor(minor)
     {
