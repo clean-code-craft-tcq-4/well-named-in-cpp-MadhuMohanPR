@@ -1,6 +1,3 @@
-#include <iostream>
-#include <assert.h>
-
 #define MAJORCOLORSIZE 5
 #define MINORCOLORSIZE 5
 
