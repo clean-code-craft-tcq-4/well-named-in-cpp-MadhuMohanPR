@@ -1,16 +1,12 @@
 #include "ColorPair.h"
 
-    TelCoColorCoder::MajorColorNames = { "White", "Red", "Black", "Yellow", "Violet" };
-    TelCoColorCoder::MinorColorNames = { "Blue", "Orange", "Green", "Brown", "Slate" };
-
-    TelCoColorCoder::numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);    
-    TelCoColorCoder::numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-
-    TelCoColorCoder::ColorPair::ColorPair(MajorColor major, MinorColor minor): majorColor(major), minorColor(minor)
+namespace TelCoColorCoder
+{
+    ColorPair::ColorPair(MajorColor major, MinorColor minor): majorColor(major), minorColor(minor)
     {
     }
 
-    std::string TelCoColorCoder::ColorPair::ToString()
+    std::string ColorPair::ToString()
     {
         std::string colorPairStr = MajorColorNames[majorColor];
         colorPairStr += " ";
@@ -18,7 +14,7 @@
         return colorPairStr;
     }
 
-    ColorPair TelCoColorCoder::GetColorFromPairNumber(int pairNumber)
+    ColorPair GetColorFromPairNumber(int pairNumber)
     {
         int zeroBasedPairNumber = pairNumber - 1;
         MajorColor majorColor = (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
@@ -26,7 +22,9 @@
         return ColorPair(majorColor, minorColor);
     }
 
-    int TelCoColorCoder::GetPairNumberFromColor(MajorColor major, MinorColor minor)
+    int GetPairNumberFromColor(MajorColor major, MinorColor minor)
     {
         return major * numberOfMinorColors + minor + 1;
     }
+}
+
