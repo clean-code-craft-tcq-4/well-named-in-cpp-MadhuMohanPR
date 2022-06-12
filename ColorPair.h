@@ -1,3 +1,4 @@
+#include<stdlib.h>
 #include <string>
 
 #define MAJORCOLORSIZE 5
