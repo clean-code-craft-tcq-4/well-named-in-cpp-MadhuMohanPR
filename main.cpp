@@ -2,13 +2,10 @@
 #include <assert.h>
 #include "ColorPair.h"
 
-namespace TelCoColorCoder
-{
-    MajorColorNames[MAJORCOLORSIZE] = { "White", "Red", "Black", "Yellow", "Violet" };
-    MinorColorNames[MAJORCOLORSIZE] = { "Blue", "Orange", "Green", "Brown", "Slate" };
-    numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-    numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-}
+TelCoColorCoder::MajorColorNames[MAJORCOLORSIZE] = { "White", "Red", "Black", "Yellow", "Violet" };
+TelCoColorCoder::MinorColorNames[MAJORCOLORSIZE] = { "Blue", "Orange", "Green", "Brown", "Slate" };
+TelCoColorCoder::numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
+TelCoColorCoder::numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
 void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
