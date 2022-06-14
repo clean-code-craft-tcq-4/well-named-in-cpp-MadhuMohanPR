@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <assert.h>
 #include <string>
 
 #define MAJORCOLORSIZE 5
