@@ -1,8 +1,18 @@
 #include <string>
-#include "main.cpp"
+
+#define MAJORCOLORSIZE 5
+#define MINORCOLORSIZE 5
 
 namespace TelCoColorCoder
 {
+    enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
+    enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
+
+    const char* MajorColorNames[MAJORCOLORSIZE] = { "White", "Red", "Black", "Yellow", "Violet" };
+    int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
+    const char* MinorColorNames[MAJORCOLORSIZE] = { "Blue", "Orange", "Green", "Brown", "Slate" };
+    int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+    
     class ColorPair
     {
         private:
