@@ -1,5 +1,6 @@
 #include <iostream>
 #include <assert.h>
+#include "ColorPair.h"
 
 #define MAJORCOLORSIZE 5
 #define MINORCOLORSIZE 5
