@@ -1,8 +1,8 @@
-#include "ColorPairTypes.h"
+#include "ColorCode.h"
 
 namespace TelCoColorCoder
 {
-   static const std::string MapColorCodePairToPairNumber(const ColorCodePair &colorCodePair)
+   inline std::string ColorCode::MapColorCodePairToPairNumber(const ColorCodePair &colorCodePair)
    {
       switch (colorCodePair)
       {
