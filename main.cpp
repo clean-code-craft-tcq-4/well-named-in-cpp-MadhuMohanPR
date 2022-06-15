@@ -1,7 +1,7 @@
 #include <iostream>
 #include <assert.h>
 #include "ColorPair.h"
-#include "ColorPairTypes.h"
+#include "ColorCode.h"
 
 void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
@@ -25,7 +25,8 @@ void testPairToNumber(
 
 int main()
 {
-    std::cout << "Color Code Pair : " << TelCoColorCoder::MapColorCodePairToPairNumber(TelCoColorCoder::ColorCodePair::ColorCodePair__WHITE_BLUE) << std::endl;
+    TelCoColorCoder::ColorCode colorCode;
+    std::cout << "Color Code Pair : " << colorCode.MapColorCodePairToPairNumber(TelCoColorCoder::ColorCode::ColorCodePair__WHITE_BLUE) << std::endl;
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
 
