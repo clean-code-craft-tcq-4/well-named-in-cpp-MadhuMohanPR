@@ -2,7 +2,7 @@
 
 namespace TelCoColorCoder
 {
-   enum ColorCodePair
+   typedef enum
    {
       ColorCodePair__UNKNOWN = 0,
       ColorCodePair__WHITE_BLUE,
@@ -30,6 +30,6 @@ namespace TelCoColorCoder
       ColorCodePair__VIOLET_GREEN,
       ColorCodePair__VIOLET_BROWN,
       ColorCodePair__VIOLET_SLATE
-   };
-   static const std::string MapColorCodePairToPairNumber(ColorCodePair colorCodePair);
+   } ColorCodePair;
+   static const std::string MapColorCodePairToPairNumber(const ColorCodePair &colorCodePair);
 }
