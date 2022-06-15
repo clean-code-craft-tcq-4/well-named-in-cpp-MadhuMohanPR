@@ -5,11 +5,11 @@
 
 namespace TelCoColorCoder
 {
-    static const char* MajorColorNames[MAJORCOLORELEMENT] = { "White", "Red", "Black", "Yellow", "Violet" };
-    static int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
+    const char* MajorColorNames[MAJORCOLORELEMENT] = { "White", "Red", "Black", "Yellow", "Violet" };
+    int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 
-    static const char* MinorColorNames[MINORCOLORELEMENT] = { "Blue", "Orange", "Green", "Brown", "Slate" };
-    static int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
+    const char* MinorColorNames[MINORCOLORELEMENT] = { "Blue", "Orange", "Green", "Brown", "Slate" };
+    int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
     ColorPair::ColorPair(MajorColor major, MinorColor minor): majorColor(major), minorColor(minor)
     {
