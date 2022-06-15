@@ -36,6 +36,6 @@ namespace TelCoColorCoder
          } ColorCodePair;
  
          ColorCode() {}
-         std::string MapColorCodePairToPairNumber(const ColorCodePair &colorCodePair);
+         std::string MapColorCodePairToPairNumber(ColorCodePair colorCodePair);
    };
 }
