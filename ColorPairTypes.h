@@ -31,4 +31,5 @@ namespace TelCoColorCoder
       ColorCodePair__VIOLET_BROWN,
       ColorCodePair__VIOLET_SLATE
    };
+   static const std::string MapColorCodePairToPairNumber(ColorCodePair colorCodePair);
 }
