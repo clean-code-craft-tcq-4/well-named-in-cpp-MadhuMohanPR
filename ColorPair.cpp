@@ -2,14 +2,13 @@
 
 namespace TelCoColorCoder
 {
-    MajorColorNames = { "White", "Red", "Black", "Yellow", "Violet" };
-    numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
-
-    MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
-    numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-
     ColorPair::ColorPair(MajorColor major, MinorColor minor): majorColor(major), minorColor(minor)
     {
+        MajorColorNames = { "White", "Red", "Black", "Yellow", "Violet" };
+        numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
+
+        MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
+        numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
     }
 
     std::string ColorPair::ToString()
@@ -33,4 +32,3 @@ namespace TelCoColorCoder
         return major * numberOfMinorColors + minor + 1;
     }
 }
-
