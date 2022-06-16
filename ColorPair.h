@@ -16,8 +16,8 @@ namespace TelCoColorCoder
         public:
             const char* MajorColorNames[MAJORCOLORELEMENT];
             const char* MinorColorNames[MINORCOLORELEMENT];
-            int numberOfMajorColors;
-            int numberOfMinorColors;
+            static int numberOfMajorColors;
+            static int numberOfMinorColors;
 
             ColorPair(MajorColor major, MinorColor minor);
 
