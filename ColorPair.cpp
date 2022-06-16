@@ -3,9 +3,9 @@
 namespace TelCoColorCoder
 {
     ColorPair::ColorPair()
-        : numberOfMajorColors(sizeof(MajorColorNames) / sizeof(MajorColorNames[0])),
-          numberOfMinorColors(sizeof(MinorColorNames) / sizeof(MinorColorNames[0]))
     {
+        numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
+        numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
     }
 
     ColorPair::ColorPair(MajorColor major, MinorColor minor)
