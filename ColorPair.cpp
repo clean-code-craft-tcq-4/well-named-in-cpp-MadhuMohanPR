@@ -6,9 +6,7 @@ namespace TelCoColorCoder
         : majorColor(major),
           minorColor(minor),
           MajorColorNames{ "White", "Red", "Black", "Yellow", "Violet" },
-          MinorColorNames{ "Blue", "Orange", "Green", "Brown", "Slate" },
-          numberOfMajorColors(sizeof(MajorColorNames) / sizeof(MajorColorNames[0])),
-          numberOfMinorColors(sizeof(MinorColorNames) / sizeof(MinorColorNames[0]))
+          MinorColorNames{ "Blue", "Orange", "Green", "Brown", "Slate" }
     {
     }
 
