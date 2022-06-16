@@ -1,5 +1,8 @@
 #include <string>
 
+#define MAJORCOLORELEMENT 5
+#define MINORCOLORELEMENT 5
+
 namespace TelCoColorCoder
 {
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
@@ -11,6 +14,11 @@ namespace TelCoColorCoder
             MajorColor majorColor;
             MinorColor minorColor;
         public:
+            const char* MajorColorNames[MAJORCOLORELEMENT];
+            const char* MinorColorNames[MINORCOLORELEMENT];
+            int numberOfMajorColors;
+            int numberOfMinorColors;
+
             ColorPair(MajorColor major, MinorColor minor);
 
             MajorColor getMajor()
