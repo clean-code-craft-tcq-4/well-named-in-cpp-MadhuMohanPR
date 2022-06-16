@@ -7,7 +7,7 @@ namespace TelCoColorCoder
         MajorColorNames = { "White", "Red", "Black", "Yellow", "Violet" };
         numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
 
-        MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate" };
+        MinorColorNames = { "Blue", "Orange", "Green", "Brown", "Slate" };
         numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
     }
 
@@ -22,8 +22,8 @@ namespace TelCoColorCoder
     ColorPair GetColorFromPairNumber(int pairNumber)
     {
         int zeroBasedPairNumber = pairNumber - 1;
-        MajorColor majorColor = (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
-        MinorColor minorColor = (MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
+        MajorColor majorColor = (MajorColor)(zeroBasedPairNumber / TelCoColorCoder::ColorPair::numberOfMinorColors);
+        MinorColor minorColor = (MinorColor)(zeroBasedPairNumber % TelCoColorCoder::ColorPair::numberOfMinorColors);
         return ColorPair(majorColor, minorColor);
     }
 
