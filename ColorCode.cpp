@@ -2,7 +2,7 @@
 
 namespace TelCoColorCoder
 {
-   std::string ColorCode::MapColorCodePairToPairNumber(ColorCodePair colorCodePair)
+   inline std::string ColorCode::MapColorCodePairToPairNumber(ColorCodePair colorCodePair)
    {
       switch (colorCodePair)
       {
