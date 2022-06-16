@@ -26,7 +26,7 @@ void testPairToNumber(
 int main()
 {
     TelCoColorCoder::ColorCode colorCode;
-    std::cout << "Color Code Pair : " << colorCode.MapColorCodePairToPairNumber(static_cast<TelCoColorCoder::ColorCode::ColorCodePair>(1)) << std::endl;
+    std::cout << "Color Code Pair : " << colorCode.MapColorCodePairToPairNumber(colorCode.ColorCodePair__BLACK_SLATE) << std::endl;
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
 
