@@ -12,7 +12,6 @@ void testNumberToPair(int pairNumber,
     assert(colorPair.getMajor() == expectedMajor);
     assert(colorPair.getMinor() == expectedMinor);
 }
-
 void testPairToNumber(
     TelCoColorCoder::MajorColor major,
     TelCoColorCoder::MinorColor minor,
@@ -22,9 +21,11 @@ void testPairToNumber(
     std::cout << "Got pair number " << pairNumber << std::endl;
     assert(pairNumber == expectedPairNumber);
 }
-
 int main()
 {
+    TelCoColorCoder::ColorPair colorPair;
+    colorPair.PrintReferenceManual(pairNumber, colorPair.MajorColorNames, colorPair.MinorColorNames);
+
     TelCoColorCoder::ColorCode colorCode;
     std::cout << "Color Code Pair : " << colorCode.MapColorCodePairToPairNumber(colorCode.ColorCodePair__BLACK_SLATE) << std::endl;
     std::cout << "Color Code Pair : " << colorCode.MapColorCodePairToPairNumber(colorCode.ColorCodePair__WHITE_BROWN) << std::endl;
