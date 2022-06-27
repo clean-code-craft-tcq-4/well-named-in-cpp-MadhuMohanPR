@@ -24,7 +24,7 @@ void testPairToNumber(
 int main()
 {
     TelCoColorCoder::ColorPair colorPair;
-    colorPair.PrintReferenceManual(pairNumber, colorPair.MajorColorNames, colorPair.MinorColorNames);
+    colorPair.PrintReferenceManual(MAJORCOLORELEMENT, MINORCOLORELEMENT, colorPair.MajorColorNames, colorPair.MinorColorNames);
 
     TelCoColorCoder::ColorCode colorCode;
     std::cout << "Color Code Pair : " << colorCode.MapColorCodePairToPairNumber(colorCode.ColorCodePair__BLACK_SLATE) << std::endl;
