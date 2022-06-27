@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 
 #define MAJORCOLORELEMENT 5  //MAJORCOLORELEMENT defines number of Major Color
@@ -29,7 +30,7 @@ namespace TelCoColorCoder
                 return minorColor;
             }
             std::string ToString();
-            void PrintReferenceManual(int numberOfMajorColors, int numberOfMinorColors, const char* &MajorColorNames[MAJORCOLORELEMENT], const char* &MinorColorNames[MINORCOLORELEMENT]);
+            void PrintReferenceManual(int numberOfMajorColors, int numberOfMinorColors, const char* MajorColorNames[MAJORCOLORELEMENT], const char* MinorColorNames[MINORCOLORELEMENT]);
     };
     ColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
