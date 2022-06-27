@@ -36,13 +36,13 @@ namespace TelCoColorCoder
         ColorPair colorPair;
         return major * colorPair.numberOfMinorColors + minor + 1;
     }
-    void PrintReferenceManual(int &pairNumber, const char* &MajorColorNames[MAJORCOLORELEMENT], const char* &MinorColorNames[MINORCOLORELEMENT])
+    void PrintReferenceManual(int &numberOfMajorColors, int &numberOfMinorColors, const char* &MajorColorNames, const char* &MinorColorNames)
     {
-        for(int i = 0; i < MAJORCOLORELEMENT; i++)
+        for(int i = 0; i < numberOfMajorColors; i++)
         {
-            for(int j = 0; j < MINORCOLORELEMENT; j++)
+            for(int j = 0; j < numberOfMinorColors; j++)
             {
-               std::cout << i * MAJORCOLORELEMENT + j + 1 << " | " << majorColor[i] << " | " << minorColor[j] << "\n";
+               std::cout << i * numberOfMajorColors + j + 1 << " | " << majorColor[i] << " | " << minorColor[j] << "\n";
         }
     }
 }
