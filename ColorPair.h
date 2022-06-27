@@ -1,13 +1,12 @@
 #include <string>
 
-#define MAJORCOLORELEMENT 5
-#define MINORCOLORELEMENT 5
+#define MAJORCOLORELEMENT 5  //MAJORCOLORELEMENT defines number of Major Color
+#define MINORCOLORELEMENT 5  //MINORCOLORELEMENT defines number of Minor Color
 
 namespace TelCoColorCoder
 {
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
-
     class ColorPair
     {
         private:
@@ -18,10 +17,9 @@ namespace TelCoColorCoder
             const char* MinorColorNames[MINORCOLORELEMENT];
             int numberOfMajorColors;
             int numberOfMinorColors;
-
+            int pairNumber;
             ColorPair();
             ColorPair(MajorColor major, MinorColor minor);
-
             MajorColor getMajor()
             {
                 return majorColor;
@@ -30,10 +28,9 @@ namespace TelCoColorCoder
             {
                 return minorColor;
             }
-            
             std::string ToString();
+            void PrintReferenceManual(int pairNumber, const char* &MajorColorNames[], const char* &MinorColorNames[]);
     };
-
     ColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
 }
