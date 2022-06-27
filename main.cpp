@@ -1,4 +1,3 @@
-#include <iostream>
 #include <assert.h>
 #include "ColorPair.h"
 #include "ColorCode.h"
