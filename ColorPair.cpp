@@ -4,19 +4,18 @@
 namespace TelCoColorCoder
 {
     ColorPair::ColorPair()
-        : numberOfMajorColors(sizeof(MajorColorNames) / sizeof(MajorColorNames[0])),
-          numberOfMinorColors(sizeof(MinorColorNames) / sizeof(MinorColorNames[0]))
+        : MajorColorNames{ "White", "Red", "Black", "Yellow", "Violet" },
+          MinorColorNames{ "Blue", "Orange", "Green", "Brown", "Slate" },
+          numberOfMajorColors(sizeof(MajorColorNames) / sizeof(MajorColorNames[0])),
+          numberOfMinorColors(sizeof(MinorColorNames) / sizeof(MinorColorNames[0])),
+          pairNumber(numberOfMajorColors * numberOfMinorColors)
     {
     }
-
     ColorPair::ColorPair(MajorColor major, MinorColor minor)
         : majorColor(major),
-          minorColor(minor),
-          MajorColorNames{ "White", "Red", "Black", "Yellow", "Violet" },
-          MinorColorNames{ "Blue", "Orange", "Green", "Brown", "Slate" }
+          minorColor(minor)
     {
     }
-
     std::string ColorPair::ToString()
     {
         std::string colorPairStr = MajorColorNames[majorColor];
@@ -24,7 +23,6 @@ namespace TelCoColorCoder
         colorPairStr += MinorColorNames[minorColor];
         return colorPairStr;
     }
-
     ColorPair GetColorFromPairNumber(int pairNumber)
     {
         ColorPair colorPair;
@@ -33,10 +31,18 @@ namespace TelCoColorCoder
         MinorColor minorColor = (MinorColor)(zeroBasedPairNumber % colorPair.numberOfMinorColors);
         return ColorPair(majorColor, minorColor);
     }
-
     int GetPairNumberFromColor(MajorColor major, MinorColor minor)
     {
         ColorPair colorPair;
         return major * colorPair.numberOfMinorColors + minor + 1;
+    }
+    void PrintReferenceManual(int &pairNumber, const char* &MajorColorNames[MAJORCOLORELEMENT], const char* &MinorColorNames[MINORCOLORELEMENT])
+    {
+        for(int i = 0; i < MAJORCOLORELEMENT; i++)
+        {
+            for(int j = 0; j < MINORCOLORELEMENT; j++)
+            {
+               std::cout << i * MAJORCOLORELEMENT + j + 1 << " | " << majorColor[i] << " | " << minorColor[j] << "\n";
+        }
     }
 }
