@@ -2,7 +2,6 @@
 #define COLORPAIR_H
 
 #include <iostream>
-#include <stdlib.h>
 #include <assert.h>
 #include <string>
 
