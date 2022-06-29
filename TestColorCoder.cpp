@@ -1,4 +1,3 @@
-#include <assert.h>
 #include "TestColorCoder.h"
 
 void testNumberToPair(int pairNumber,
