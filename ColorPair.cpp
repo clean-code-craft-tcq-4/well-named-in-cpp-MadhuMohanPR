@@ -18,17 +18,15 @@ namespace TelCoColorCoder
     }
     void ColorPair::PrintReferenceManual()
     {
-       std::string colorPairString = "";
-       int counter = 0;
+       int PairNumber = 0;
        for(int i =0; i < numberOfMajorColors; i++)
        {
           for(int j= 0; j < numberOfMinorColors;j++)
           {
-             counter++;
-             colorPairString = MajorColorNames[i];
-             colorPairString += "/";
-             colorPairString += MinorColorNames[j];
-             std::cout << "Major/Minor Color, Number is: " << colorPairString << ", " <<counter<< std::endl;
+             PairNumber++;
+             std::cout << "Pair Number " << PairNumber;
+             std::cout << "Major Color " << MajorColorNames[i];
+             std::cout << "Minor Color " << MinorColorNames[j] << std::endl;
           }
        }
     }
