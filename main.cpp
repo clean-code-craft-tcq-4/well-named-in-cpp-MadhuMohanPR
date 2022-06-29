@@ -3,6 +3,9 @@
 
 int main()
 {
+    TelCoColorCoder::ColorPair colorPair;
+    colorPair.PrintReferenceManual();
+
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
 
