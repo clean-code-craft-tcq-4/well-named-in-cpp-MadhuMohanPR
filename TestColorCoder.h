@@ -1,7 +1,6 @@
 #ifndef TESTCOLORCODER_H
 #define TESTCOLORCODER_H
 
-#include <stdlib.h>
 #include "ColorPair.h"
 
 void testNumberToPair(int pairNumber,
