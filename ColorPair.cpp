@@ -16,12 +16,21 @@ namespace TelCoColorCoder
           minorColor(minor)
     {
     }
-    std::string ColorPair::ToString()
+    void ColorPair::PrintReferenceManual()
     {
-        std::string colorPairStr = MajorColorNames[majorColor];
-        colorPairStr += " ";
-        colorPairStr += MinorColorNames[minorColor];
-        return colorPairStr;
+       std::string colorPairString = "";
+       int counter = 0;
+       for(int i =0; i < numberOfMajorColors; i++)
+       {
+          for(int j= 0; j < numberOfMinorColors;j++)
+          {
+             counter++;
+             colorPairString = MajorColorNames[i];
+             colorPairString += "/";
+             colorPairString += MinorColorNames[j];
+             std::cout << "Major/Minor Color, Number is: " << colorPairString << ", " <<counter<< std::endl;
+          }
+       }
     }
     ColorPair GetColorFromPairNumber(int pairNumber)
     {
