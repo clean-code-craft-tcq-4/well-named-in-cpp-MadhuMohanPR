@@ -1,4 +1,5 @@
-#include "ColorPair.h"
+#include <assert.h>
+#include "TestColorCoder.h"
 
 void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
