@@ -3,6 +3,7 @@
 
 int main()
 {
+    TelCoColorCoder::ColorPair colorPair;
     TelCoColorCoder::ColorCode colorCode;
     std::cout << "Color Code Pair : " << colorCode.MapColorCodePairToPairNumber(colorCode.ColorCodePair__BLACK_SLATE) << std::endl;
     std::cout << "Color Code Pair : " << colorCode.MapColorCodePairToPairNumber(colorCode.ColorCodePair__WHITE_BROWN) << std::endl;
