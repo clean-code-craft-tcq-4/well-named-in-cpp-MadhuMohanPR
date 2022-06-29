@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "TestColorCoder.h"
 
 void testNumberToPair(int pairNumber,
