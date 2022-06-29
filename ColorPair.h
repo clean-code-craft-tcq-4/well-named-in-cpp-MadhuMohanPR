@@ -33,7 +33,14 @@ namespace TelCoColorCoder
             {
                 return minorColor;
             }
-            std::string ToString();
+            std::string ToString()
+            {
+               std::string colorPairStr = MajorColorNames[majorColor];
+               colorPairStr += " ";
+               colorPairStr += MinorColorNames[minorColor];
+               return colorPairStr;
+            }
+            void PrintReferenceManual();
     };
     ColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
